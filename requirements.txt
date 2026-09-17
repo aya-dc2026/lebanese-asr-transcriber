@@ -1,0 +1,30 @@
+# Core ML stack (install PyTorch separately first - see README for the
+# Blackwell/sm_120 CUDA build command specific to your driver version)
+transformers>=4.46
+accelerate>=0.34
+peft>=0.13
+datasets>=3.0
+huggingface_hub>=0.25
+
+# Audio
+ffmpeg-python>=0.2.0
+pydub>=0.25
+torchaudio
+
+# Backend
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+python-dotenv>=1.0
+
+# Correction storage
+SQLAlchemy>=2.0
+
+# Auth
+passlib[bcrypt]>=1.7
+
+# Evaluation
+jiwer>=3.0
+
+# Optional experiment tracking - comment out if unused
+# mlflow>=2.16

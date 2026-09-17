@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Secrets
+.env
+
+# Model weights (multi-GB, pulled via scripts/download_model.sh)
+models/base/*
+!models/base/.gitkeep
+
+# LoRA adapters are small (tens of MB) - you MAY choose to keep these in git.
+# Uncomment the next two lines if you'd rather exclude them too:
+# models/adapters/*
+# !models/adapters/.gitkeep
+
+# User data (audio uploads are large/private)
+data/uploads/*
+!data/uploads/.gitkeep
+data/training_exports/*
+!data/training_exports/.gitkeep
+
+# Correction DB is small text-ish data; track it if you want history,
+# or ignore it if it contains audio paths you don't want in git:
+# data/corrections.db
+
+# OS
+.DS_Store
